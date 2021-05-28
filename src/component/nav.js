@@ -24,13 +24,16 @@ export default function Nav(props) {
             setProductState([]);
         }
     }, [state])
-
     
     const handleLogout = () => {
-        dispatch({type:"UPDATEAUTH", isAuthnticated: !isLoggedin })
-        setisLoggedin(!isLoggedin);
+        dispatch({type:"UPDATEAUTH", isAuthnticated: false })
+        setisLoggedin(false);
     }
 
+    const handleLgin = () => {
+        dispatch({type:"UPDATEAUTH", isAuthnticated: true })
+        setisLoggedin(true);
+    }
 
     let content = [];
     let rowSet;
@@ -110,6 +113,13 @@ export default function Nav(props) {
                     </form>
 
                     <ul className="navbar-nav ml-auto">
+                    {!isLoggedin &&
+                    <li className="nav-item">
+                        <Link className="nav-link mr-4" to="#" onClick={handleLgin}>
+                         Click here to Login
+                        </Link>
+                    </li>
+                    }
                     <li className="nav-item">
                         <Link className="nav-link mr-4" to="#">
                             <svg xmlns="http://www.w3.org/2000/svg" 

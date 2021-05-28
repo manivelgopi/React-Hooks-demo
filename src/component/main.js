@@ -1,12 +1,13 @@
-import React, { useContext, useEffect, useState, useCallback } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { ProductContext } from './productContext';
 import { Link } from "react-router-dom";
 export default function Main(props) {
 
     const { state } = useContext(ProductContext);
-    const { searchKey, data,} = state;
+    const { searchKey, data} = state;
+    //console.log(data);
 
-    const [isLoading, setisLoading] = useState(true);
+    const [isLoading, setisLoading] = useState(false);
     const [productState, setProductState] = useState([]);
 
     const [allproducts, setAllproducts] = useState([]);
@@ -17,20 +18,23 @@ export default function Main(props) {
             setDisplayProducts(allproducts.filter( 
                 product => new RegExp(searchKey.toLowerCase()).test((product.name).toLowerCase() ) ));
               console.log();
+        }else if(allproducts.length > 0 && searchKey === ""){
+            setDisplayProducts(allproducts);
         }
         else{
-            setDisplayProducts(allproducts);
+            setDisplayProducts([]);
         }    
         return () => {
             //cleanup
         }
     }, [searchKey, allproducts])
     
+    
+    useEffect(() => {
+        const content=[];
 
-    const productList = useCallback(() => {
-        const content = [];
-
-		productState.map((category, indx) => {
+        if(productState.length > 0){
+		  productState.map((category, indx) => {
             category.products.map( (product,pid) =>
             {
                 content.push(product);
@@ -43,32 +47,25 @@ export default function Main(props) {
             }
             )
             return null
-    })
+          })
+        }else{
+            setAllproducts([]);
+        }
+        return() => {}
 	}, [productState])
     
         
     useEffect(() => {
-        
-        if(data.length > 0){
-            setProductState(data);
-            setisLoading(false);
-            productList();
-        }   
-        else if(data.length === 0){
-            setProductState([]);
-            setisLoading(false);
-        }
-        else{ 
-            setProductState([]);
-            setisLoading(true);
-        }
+        console.log("Main mount call", data);
+        setisLoading(true);
+        setProductState(data);
+        setisLoading(false);
 
         return () => {
-            setProductState([]);
             setisLoading(false);
             console.log("Main unmount call");
         }
-    }, [data, productList]);
+    }, [data]);
 
     return (
         <div id="main">

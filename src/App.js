@@ -25,6 +25,7 @@ const reducer =(state,action) => {
       case 'UPDATEAUTH':
         return {...state, isAuthnticated: action.payload};
       case 'PRODUCT':
+        //console.log("data updated", action.payload);
         return {...state, data: action.payload };
       case 'SEARCHKEY':
         return {...state, searchKey: action.payload}
@@ -48,6 +49,7 @@ function App() {
 
   useEffect(()=>{
       if(data){
+        //console.log("data received",data);
         dispatch({type:"PRODUCT",  payload:data});
       }
 
@@ -55,7 +57,7 @@ function App() {
       setUrlerror(errorData);
 
       return () => {
-        console.log("App Unmounted");
+       // console.log("App Unmounted");
       }
   },[data, errorData, isLoadingData])
     
