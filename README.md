@@ -38,11 +38,7 @@ C:\Users\User Name\demo>  npx json-server --watch src/db.json --port 8000
 * version 1.0.0 build 1 has been released in 28-May
 
 ## Hooks used
-   ### useState
-   ### useEffect
-   ### useReducer
-   ### useCalback
-   ### useContext
+   ### *[React Hooks](https://reactjs.org/docs/hooks-reference.html) 
 with the help of react create Context api.
 
 ## Change Log
