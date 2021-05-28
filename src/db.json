@@ -1,0 +1,137 @@
+{"dbdata":[
+    {
+      "product": "Camera",
+      "cid": "1",
+      "products": [
+        {
+          "id": 101,
+          "name": "DSLR-100"
+        },
+        {
+          "id": 102,
+          "name": "DSLR-120"
+        },
+        {
+          "id": 103,
+          "name": "DSLR-200"
+        },
+        {
+          "id": 104,
+          "name": "DSLR-90"
+        }
+      ]
+    },
+    {
+      "product": "Lens",
+      "cid": "2",
+      "products": [
+        {
+          "id": 201,
+          "name": "Lens-100"
+        },
+        {
+          "id": 202,
+          "name": "Lens-120"
+        },
+        {
+          "id": 203,
+          "name": "Lens-200"
+        },
+        {
+          "id": 204,
+          "name": "Lens-90"
+        }
+      ]
+    },
+    {
+      "product": "Printer",
+      "cid": "3",
+      "products": [
+        {
+          "id": 301,
+          "name": "printer-100"
+        },
+        {
+          "id": 302,
+          "name": "printer-120"
+        },
+        {
+          "id": 303,
+          "name": "printer-200"
+        },
+        {
+          "id": 304,
+          "name": "printer-90"
+        }
+      ]
+    },
+    {
+      "product": "scanner",
+      "cid": "4",
+      "products": [
+        {
+          "id": 401,
+          "name": "scanner-100"
+        },
+        {
+          "id": 402,
+          "name": "scanner-120"
+        },
+        {
+          "id": 403,
+          "name": "scanner-200"
+        },
+        {
+          "id": 404,
+          "name": "scanner-90"
+        }
+      ]
+    },
+    {
+      "product": "bike",
+      "cid": "5",
+      "products": [
+        {
+          "id": 501,
+          "name": "Bike-100"
+        },
+        {
+          "id": 502,
+          "name": "Bike-120"
+        }
+      ]
+    },
+    {
+      "product": "Cycle",
+      "cid": "6",
+      "products": [
+        {
+          "id": 601,
+          "name": "Cycle-100"
+        },
+        {
+          "id": 602,
+          "name": "Cycle-120"
+        }
+      ]
+    },
+    {
+      "product": "Mobile",
+      "cid": "7",
+      "products": [
+        {
+          "id": 701,
+          "name": "Mobile-100"
+        },
+        {
+          "id": 702,
+          "name": "Mobile-120"
+        },
+        {
+          "id": 703,
+          "name": "Mobile-150"
+        }
+      ]
+    }
+]
+}
