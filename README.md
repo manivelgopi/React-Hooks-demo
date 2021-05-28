@@ -2,6 +2,11 @@
 ## suggestions are welcome.. 
 
 React Hooks Demo app. The demo app with respect to online shoping build with React.
+Features:
+- Dynamic Navigation Menu render
+- Dymanic Product page 
+- Product search
+- Protected component/route access
 
 ## Before install
 
