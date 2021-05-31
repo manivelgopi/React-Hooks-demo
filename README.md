@@ -6,7 +6,12 @@ Features:
 - Dynamic Navigation Menu render
 - Dymanic Product page 
 - Product search
+   Better to search from the Home page for the better user experience
+   Keywords:
+   - dslr
+   - dslr <script alert(0) />  => dslr on console
 - Protected component/route access
+   - Product item view will allow if user logged out
 
 ## Before install
 
