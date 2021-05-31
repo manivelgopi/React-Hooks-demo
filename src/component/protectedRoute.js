@@ -1,12 +1,20 @@
+import {useContext} from "react"
 import { Route, Redirect } from "react-router-dom";
+import {ProductContext} from "./productContext";
 
-export default function ProtectedRoute({component: Component, path, auth,  ...rest}){  
-    return (
+
+
+export default function ProtectedRoute({component: Component, path,  ...rest}){  
+ 
+ const { state } = useContext(ProductContext);
+  
+  return (
       <Route
         {...rest}
-          render={(props) => auth === true
+          render={(props) => state.isAuthnticated === true
           ? <Component {...props} />
-          : <Redirect to={{pathname: '/', state: {from: props.location}}} />}
+          : 
+          <Redirect to={{pathname: '/', state: {from: props.location}}} />}
       />
     )
   }

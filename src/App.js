@@ -15,10 +15,9 @@ const initState = {
                         token: 0,
                         userName:"Manivel",
                         data: [],
-                        isAuthnticated: true,
+                        isAuthnticated: false,
                         searchKey:""
-                    };
-
+                  };
 
 const reducer =(state,action) => {
     switch(action.type){
@@ -66,14 +65,15 @@ function App() {
       <Router>
       <div id="app">
       { urlerror && <p> {urlerror} </p>}
-      { isLoading ? <p>  Loading...</p> :
+      { isLoading ? <p> Loading...</p> :
        <>
        <Nav></Nav> 
          <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/home" exact component={Home} />
+            <Route path="/product" exact component={Home} />
             {/* <Route path="/product/:id" component={Product} /> */}
-            <ProtectedRoute path="/product/:id" component={Product} auth={state.isAuthnticated} />
+            <ProtectedRoute path="/product/:id" component={Product} />
             <Route path="*" component={PageNotFound} />
          </Switch>
       <Footer></Footer> 

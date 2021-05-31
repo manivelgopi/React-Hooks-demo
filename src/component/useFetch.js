@@ -19,7 +19,7 @@ export default function useFetch(url, method = null) {
             setData(res);
         })
         .catch(err=>{
-          console.log(err);
+          //console.log(err);
           setError("Something went wrong");
          
         })

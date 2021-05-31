@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import {useContext} from 'react';
-import { ProductContext } from './productContext';
-import {
-    Link
-  } from "react-router-dom";
+import {ProductContext} from './productContext';
+import {Link} from "react-router-dom";
 import DOMPurify from 'dompurify';
 
   
 export default function Nav(props) {
 
     const { state, dispatch } = useContext(ProductContext);
+    const { isAuthnticated } = state;
+
     //console.log(state);
     const [productState, setProductState] = useState([]);
-    const [isLoggedin, setisLoggedin] = useState([]);
 
     useEffect(() => {
         if(state.data.length > 0)
@@ -23,16 +22,14 @@ export default function Nav(props) {
         return () => {
             setProductState([]);
         }
-    }, [state])
+    }, [state.data])
     
     const handleLogout = () => {
-        dispatch({type:"UPDATEAUTH", isAuthnticated: false })
-        setisLoggedin(false);
+        dispatch({type:"UPDATEAUTH", payload: false })
     }
 
     const handleLgin = () => {
-        dispatch({type:"UPDATEAUTH", isAuthnticated: true })
-        setisLoggedin(true);
+        dispatch({type:"UPDATEAUTH", payload: true })
     }
 
     let content = [];
@@ -113,7 +110,7 @@ export default function Nav(props) {
                     </form>
 
                     <ul className="navbar-nav ml-auto">
-                    {!isLoggedin &&
+                    {!isAuthnticated &&
                     <li className="nav-item">
                         <Link className="nav-link mr-4" to="#" onClick={handleLgin}>
                          Click here to Login
@@ -130,7 +127,7 @@ export default function Nav(props) {
                             <span className="badge badge-light cart-badge">0</span>
                         </Link>
                     </li>
-                    {isLoggedin &&
+                    {isAuthnticated &&
                     <li className="nav-item">
                         <Link className="nav-link mr-4" to="#" onClick={handleLogout}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-power" viewBox="0 0 16 16">

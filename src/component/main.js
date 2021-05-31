@@ -41,7 +41,7 @@ export default function Main(props) {
                 if(productState.length-1 === indx && 
                     category.products.length-1 === pid){
                         setAllproducts(content);
-                        console.log("products",content)
+                        //console.log("products",content)
                     }
                     return null
             }
@@ -56,14 +56,14 @@ export default function Main(props) {
     
         
     useEffect(() => {
-        console.log("Main mount call", data);
+        //console.log("Main mount call", data);
         setisLoading(true);
         setProductState(data);
         setisLoading(false);
 
         return () => {
             setisLoading(false);
-            console.log("Main unmount call");
+            //console.log("Main unmount call");
         }
     }, [data]);
 
