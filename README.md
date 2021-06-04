@@ -13,6 +13,9 @@ Features:
 - Protected component/route access
    - Product item view will allow if user logged out
 
+##TDD
+TDD with Jest and Enzyme
+
 ## Before install
 
 I have used src/db.json file for dummy DB for products list and running the same with json-server to act as backend for fetch.
@@ -32,15 +35,6 @@ New terminal -2:
 ```bash
 C:\Users\User Name\demo>  npx json-server --watch src/db.json --port 8000
 ```
-
-
-## Version
-### Ver 1.0.0 B 1.0 
-#### Download
- * [Version 1.0.0 B1 - source](https://github.com/manivelgopi/React-Hooks-demo/archive/refs/heads/main.zip)
-
-#### Comments
-* version 1.0.0 build 1 has been released in 28-May
 
 ## Hooks used
    ### *[React Hooks](https://reactjs.org/docs/hooks-reference.html) 
