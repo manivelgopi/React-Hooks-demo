@@ -11,7 +11,7 @@ export default function ProtectedRoute({component: Component, path,  ...rest}){
   return (
       <Route
         {...rest}
-          render={(props) => state.isAuthnticated === true
+          render={(props) => state.isAuth === true
           ? <Component {...props} />
           : 
           <Redirect to={{pathname: '/', state: {from: props.location}}} />}

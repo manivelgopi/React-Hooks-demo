@@ -1,7 +1,7 @@
 {"dbdata":[
     {
       "product": "Camera",
-      "cid": "1",
+      "cid": 1,
       "products": [
         {
           "id": 101,
@@ -23,7 +23,7 @@
     },
     {
       "product": "Lens",
-      "cid": "2",
+      "cid": 2,
       "products": [
         {
           "id": 201,
@@ -45,7 +45,7 @@
     },
     {
       "product": "Printer",
-      "cid": "3",
+      "cid": 3,
       "products": [
         {
           "id": 301,
@@ -66,8 +66,8 @@
       ]
     },
     {
-      "product": "scanner",
-      "cid": "4",
+      "product": "Scanner",
+      "cid": 4,
       "products": [
         {
           "id": 401,
@@ -88,8 +88,8 @@
       ]
     },
     {
-      "product": "bike",
-      "cid": "5",
+      "product": "Bike",
+      "cid": 5,
       "products": [
         {
           "id": 501,
@@ -103,7 +103,7 @@
     },
     {
       "product": "Cycle",
-      "cid": "6",
+      "cid": 6,
       "products": [
         {
           "id": 601,
@@ -117,7 +117,7 @@
     },
     {
       "product": "Mobile",
-      "cid": "7",
+      "cid": 7,
       "products": [
         {
           "id": 701,

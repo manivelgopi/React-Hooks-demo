@@ -10308,7 +10308,15 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 1.1rem;
 }
 
+.dropdown-item.dropMenuHead:active{
+  color: #ffffff;
+}
+
 .badge.cart-badge{
   margin-top: -10px;
-    position: absolute;
+  position: absolute;
+}
+
+.home-search{
+  width: 300px !important;
 }
